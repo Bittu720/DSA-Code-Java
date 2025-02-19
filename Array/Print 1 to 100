@@ -1,0 +1,15 @@
+import java.util.*;
+class GFG {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        List<Integer> al = new ArrayList<>();
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt(); 
+        System.out.println("Enter " + n + " numbers:");
+        for (int i = 0; i < n; i++) {
+            al.add(sc.nextInt()); 
+        }
+        System.out.println("Your List: " + al);
+        sc.close();
+    }
+}
