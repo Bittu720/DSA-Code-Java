@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class GFG {  
+	static void bonacciseries(int n, int m) { 
+		int a[] = new int[m]; 
+		for(int i = 0; i < n - 1; i++) 
+			a[i] = 0; 
+		a[n - 1] = 1; 
+		for (int i = n; i < m; i++) 
+			a[i] = 2 * a[i - 1] - a[i - n]; 
+		for (int i = 0; i < m; i++) 
+			System.out.print(a[i] + " "); 
+		
+		System.out.println(); 
+	} 
+	public static void main(String args[]) { 
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter value of N (order of Bonacci): ");
+		int N = sc.nextInt();
+	
+		System.out.print("Enter value of M (length of series): ");
+		int M = sc.nextInt();
+		if (M < N) {
+			System.out.println("M must be greater than or equal to N.");
+		} else {
+			bonacciseries(N, M);
+		}
+		sc.close();
+	} 
+} 
