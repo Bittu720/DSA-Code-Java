@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class MaximumOccurredElement {
+    static int MAX = 1000000;
+    static int maximumOccurredElement(int[] L, int[] R, int n) {
+        int[] arr = new int[MAX];
+        int maxi = -1;
+        for (int i = 0; i < n; i++) {
+            arr[L[i]] += 1;
+            arr[R[i] + 1] -= 1;
+            if (R[i] > maxi) {
+                maxi = R[i];
+            }
+        }
+        int msum = arr[0], ind = 0;
+        for (int i = 1; i <= maxi; i++) {
+            arr[i] += arr[i - 1];
+            if (msum < arr[i]) {
+                msum = arr[i];
+                ind = i;
+            }
+        }
+        return ind;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of ranges: ");
+        int n = sc.nextInt();
+        int[] L = new int[n];
+        int[] R = new int[n];
+        System.out.println("Enter the L and R values:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("Range " + (i + 1) + " - L: ");
+            L[i] = sc.nextInt();
+            System.out.print("Range " + (i + 1) + " - R: ");
+            R[i] = sc.nextInt();
+        }
+        int result = maximumOccurredElement(L, R, n);
+        System.out.println("The maximum occurred element is: " + result);
+        sc.close();
+    }
+}
