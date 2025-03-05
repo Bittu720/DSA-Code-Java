@@ -1,0 +1,28 @@
+import java.util.*;
+class GFG {    
+    static int sqRootFloor(int x) {
+        int low = 1, high = x, ans = 0;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            int midSq = mid * mid;
+
+            if (midSq == x)
+                return mid;
+            else if (midSq < x) {
+                ans = mid;  
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int x = sc.nextInt();
+        sc.close();
+        System.out.println("Floor square root: " + sqRootFloor(x));
+    }
+}
