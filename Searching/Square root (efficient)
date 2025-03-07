@@ -1,5 +1,5 @@
 import java.util.*;
-class GFG {    
+class Main{    
     static int sqRootFloor(int x) {
         int low = 1, high = x, ans = 0;
         while (low <= high) {
