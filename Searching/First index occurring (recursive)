@@ -1,5 +1,5 @@
 import java.util.*;
-class GFG {
+class Main{
     static int firstOcc(int arr[], int low, int high, int x) {
         if (low > high)
             return -1;
