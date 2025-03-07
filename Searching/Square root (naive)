@@ -1,5 +1,5 @@
 import java.util.*;
-class GFG {    
+class Main{    
     static int sqRootFloor(int x) {
         int i = 1;
         while (i * i <= x)
