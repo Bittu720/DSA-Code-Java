@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class leftmostnonrepbetter {
    static final int CHAR=256;
    static  int nonrep(String str){
