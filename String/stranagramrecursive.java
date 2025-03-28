@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class stranagramrecursive {
     static final int CHAR=256;
     public static boolean anagram(String str1,String str2){
