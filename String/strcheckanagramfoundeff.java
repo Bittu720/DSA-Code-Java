@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class strcheckanagramfoundeff {
     static final int CHAR=256;
     static boolean Same(int CT[],int CP[]){
