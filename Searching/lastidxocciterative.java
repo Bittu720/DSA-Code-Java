@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class lastidxocciterative{    
     static int lastOcc(int arr[], int n, int x) {
         int low = 0, high = n - 1;
