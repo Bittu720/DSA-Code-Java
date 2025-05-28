@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Textbooks for CS</title>
+</head>
+<body>
+  <h2>Textbooks for CS Department (Courses with > 2 books)</h2>
+  <table border="1">
+    <tr><th>Course #</th><th>Book ISBN</th><th>Title</th></tr>
+    {% for row in rows %}
+      <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td><td>{{ row[2] }}</td></tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
