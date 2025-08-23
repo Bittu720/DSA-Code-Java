@@ -39,3 +39,4 @@ int n=list.size();
     System.out.println(pairSum2(list,target));
   }  
 }
+
